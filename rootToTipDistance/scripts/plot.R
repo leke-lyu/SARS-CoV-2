@@ -33,6 +33,7 @@ fit1 <- lm(formula = dist ~ date - 1, data = s)
 tmp <- by(s, s$continent ,function(x) lm(formula = dist ~ date - 1, data = x ))
 list <- sapply(tmp, coef)
 #list
+#s
 s[s=="Africa"] <- paste("Africa:",format(list[[1]]*365, scientific = TRUE,digits = 3))
 s[s=="Americas"] <- paste("Americas:",format(list[[2]]*365, scientific = TRUE,digits = 3))
 s[s=="Asia"] <- paste("Asia:",format(list[[3]]*365, scientific = TRUE,digits = 3))
