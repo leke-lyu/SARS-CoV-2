@@ -2,8 +2,6 @@
 
 ######################################################################################
 # This script takes alignment sequence fasta file and converts it to phylip file
-# Author: Wenjie Deng
-# Date: 2007-01-29
 # Usage: perl Fasta2Phylip.pl inputFastaFile outputPhilipFile
 ######################################################################################
 use strict;
