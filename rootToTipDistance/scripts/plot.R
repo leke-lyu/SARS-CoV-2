@@ -1,5 +1,5 @@
 #!/usr/bin/env Rscript
-# 2021/02/27
+# 2021
 options(warn=-1)
 args = commandArgs(trailingOnly=TRUE)
 library(countrycode)
