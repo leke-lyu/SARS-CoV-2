@@ -11,6 +11,7 @@ DF$gene_f = factor(DF$gene, levels=c('ORF1ab','S','ORF3a','E','M','ORF6','ORF7a'
 
 p1 <- ggplot(DF, aes(x=gene_f, y=coef, fill=catalogue_f)) + 
   geom_bar(stat="identity", color="black", position=position_dodge()) + 
-  geom_errorbar(aes(ymin=coef-2*sd, ymax=coef+2*sd), width=.4, position=position_dodge(.9)) 
+  geom_errorbar(aes(ymin=coef, ymax=coef+2*sd), width=.4, position=position_dodge(.9)) 
 p1 <- p1 + xlab("") + ylab("Mutation Rate") + labs(fill="")
 ggsave(filename="mutationRate.pdf", width = 12, height = 6)
+
